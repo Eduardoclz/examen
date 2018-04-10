@@ -3,9 +3,9 @@
 <h1>Comidas</h1>
 @if($exito != null)
     @if($exito == 1)
-        <p>Se ha agregado una comida</p>
+        <p class="text-success">Se ha agregado una comida</p>
     @else
-        <p>No se ha podido agregar comida</p>
+        <p class="text-danger">No se ha podido agregar comida</p>
     @endif
 @endif 
 
@@ -18,9 +18,9 @@
 @endif 
 
 <a href="{{route('comidas.create')}}">
-    <button>Agregar comida</button>
+    <button class="btn btn-primary">Agregar comida</button>
 </a>
-<table>
+<table class="table table-striped">
     <thead>
         <tr>
             <th>Nombre</th>
@@ -37,7 +37,7 @@
                 <td>{{$comida->texto}}</td>
                 <td>
                     <a href="{{route('comidas.edit',$comida->id)}}">
-                        <button>Editar</button>
+                        <button class="btn btn-primary">Editar</button>
                     </a>
                 </td>
             </tr>
